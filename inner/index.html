@@ -1,0 +1,7 @@
+<script type="module">
+  navigator.serviceWorker.register("./sw.mjs");
+
+  navigator.serviceWorker.ready.then(reg => {
+    reg.active.postMessage("hello from inner.html");
+  })
+</script>
